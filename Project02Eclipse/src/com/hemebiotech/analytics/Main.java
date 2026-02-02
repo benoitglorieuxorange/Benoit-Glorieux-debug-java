@@ -5,6 +5,11 @@ import java.io.IOException;
 import java.util.*;
 import java.util.List;
 
+/**
+ * Main class to read symptoms from a file, analyze their occurrences,
+ * sort them alphabetically, and save the sorted data to a file.
+ */
+
 public class Main {
 
     public static void main(String[] args) throws IOException {
