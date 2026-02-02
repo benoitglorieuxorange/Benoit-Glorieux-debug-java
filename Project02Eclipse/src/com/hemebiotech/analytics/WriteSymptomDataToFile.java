@@ -8,6 +8,11 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.TreeMap;
 
+/**
+ * Responsible for writing sorted symptom data to a file named "result.out".
+ * Takes a TreeMap of symptoms and their counts, and writes each entry to the file.
+ */
+
 
 public class WriteSymptomDataToFile {
 
