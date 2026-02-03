@@ -37,7 +37,7 @@ public class WriteSymptomDataToFile {
                 writer.write(entry.getKey() + " : " + entry.getValue());
                 writer.newLine();
             }
-            System.out.println("HashMap successfully write in file : " + FILE_NAME);
+           
         } catch (IOException e) {
             e.printStackTrace();
         }
