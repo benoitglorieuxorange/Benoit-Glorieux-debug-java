@@ -26,10 +26,6 @@ public class Main {
         // Sort symptoms alphabetically
         TreeMap<String, Integer> sortedSymptoms = new TreeMap<>(countedSymptoms);
 
-        // Print the count of each symptom
-        System.out.println("Symptoms count: " + countedSymptoms);
-        // Print the sorted list of symptoms
-        System.out.println("Symptoms sorted: " + sortedSymptoms);
 
         // Create a file writer to save the sorted symptoms
         WriteSymptomDataToFile writer = new WriteSymptomDataToFile(sortedSymptoms);
