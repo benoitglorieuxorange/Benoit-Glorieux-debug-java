@@ -24,6 +24,7 @@ public class WriteSymptomDataToFile {
     }
 
     // Write symptoms and their counts to a file
+    @Override
     public void WriteSymptoms() {
         final String FILE_NAME = "result.out";
 
