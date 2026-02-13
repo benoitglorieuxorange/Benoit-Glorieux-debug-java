@@ -34,7 +34,7 @@ public class WriteSymptomDataToFile implements ISymptomWriter {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_NAME))) {
             // Write each symptom with its count on a new line
             for (Map.Entry<String, Integer> entry : sortedSymptoms.entrySet()) {
-                writer.write(entry.getKey() + " : " + entry.getValue());
+                writer.write(entry.getKey() + " :// " + entry.getValue());
                 writer.newLine();
             }
 
