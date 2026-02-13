@@ -7,6 +7,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Map;
 import java.util.TreeMap;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Responsible for writing sorted symptom data to a file named "result.out".
@@ -16,7 +18,8 @@ import java.util.TreeMap;
 
 public class WriteSymptomDataToFile implements ISymptomWriter {
 
-    private TreeMap<String, Integer> sortedSymptoms;
+    private final TreeMap<String, Integer> sortedSymptoms;
+    private static final Logger logger = Logger.getLogger(WriteSymptomDataToFile.class.getName());
 
     // Constructor to initialize the sorted symptoms map
     public WriteSymptomDataToFile(TreeMap<String, Integer> sortedSymptoms) {
@@ -28,18 +31,20 @@ public class WriteSymptomDataToFile implements ISymptomWriter {
     public void WriteSymptoms() {
         final String FILE_NAME = "result.out";
 
-        File file = new File(FILE_NAME);
+        //File file = new File(FILE_NAME);
 
         // Automatically close the writer after use
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_NAME))) {
             // Write each symptom with its count on a new line
             for (Map.Entry<String, Integer> entry : sortedSymptoms.entrySet()) {
-                writer.write(entry.getKey() + " :// " + entry.getValue());
+                writer.write(entry.getKey() + " : " + entry.getValue());
                 writer.newLine();
             }
 
         } catch (IOException e) {
-            e.printStackTrace();
+            logger.severe("Une erreur est survenue : " + e.getMessage());
+            // ou pour plus de détails
+            logger.log(Level.SEVERE, "Exception attrapée", e);
         }
     }
 
