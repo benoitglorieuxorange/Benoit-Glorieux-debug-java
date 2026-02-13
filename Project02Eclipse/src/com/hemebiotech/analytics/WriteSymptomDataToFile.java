@@ -42,9 +42,9 @@ public class WriteSymptomDataToFile implements ISymptomWriter {
             }
 
         } catch (IOException e) {
-            logger.severe("Une erreur est survenue : " + e.getMessage());
+            logger.severe("Error occurred : " + e.getMessage());
             // ou pour plus de détails
-            logger.log(Level.SEVERE, "Exception attrapée", e);
+            logger.log(Level.SEVERE, "Exception catch", e);
         }
     }
 
