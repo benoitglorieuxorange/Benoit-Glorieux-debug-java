@@ -14,7 +14,7 @@ import java.util.TreeMap;
  */
 
 
-public class WriteSymptomDataToFile {
+public class WriteSymptomDataToFile implements ISymptomWriter {
 
     private TreeMap<String, Integer> sortedSymptoms;
 
