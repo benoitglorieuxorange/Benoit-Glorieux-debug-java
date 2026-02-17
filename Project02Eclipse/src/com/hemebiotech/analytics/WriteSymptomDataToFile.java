@@ -31,8 +31,6 @@ public class WriteSymptomDataToFile implements ISymptomWriter {
     public void WriteSymptoms() {
         final String FILE_NAME = "result.out";
 
-        //File file = new File(FILE_NAME);
-
         // Automatically close the writer after use
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_NAME))) {
             // Write each symptom with its count on a new line

@@ -20,11 +20,13 @@ low blood pressure
 dry mouth
 tremor
 dry mouth
+toto
 arrhythmias
 stomach pain
 anxiety
 dizziness
 water retention
+toto
 fever
 low blood pressure
 inflamation
@@ -40,6 +42,7 @@ inflamation
 dry mouth
 shortness of breath
 headache
+toto
 blindness
 dry mouth
 tremor
@@ -97,4 +100,5 @@ low blood pressure
 anxiety
 anxiety
 cough
+toto
 blurred vision

@@ -21,11 +21,10 @@ public class Main {
         List<String> symptoms = reader.GetSymptoms();
 
         // Count the occurrences of each symptom
-        Map<String, Integer> countedSymptoms = new AnalyticsCounter(symptoms).countSymptoms();
+        HashMap<String, Integer> countedSymptoms = new AnalyticsCounter(symptoms).countSymptoms();
 
         // Sort symptoms alphabetically
-        TreeMap<String, Integer> sortedSymptoms = new TreeMap<>(countedSymptoms);
-
+       TreeMap<String, Integer> sortedSymptoms = new AnalyticsCounter(symptoms).sortSymptoms(countedSymptoms);
 
         // Create a file writer to save the sorted symptoms
         WriteSymptomDataToFile writer = new WriteSymptomDataToFile(sortedSymptoms);
